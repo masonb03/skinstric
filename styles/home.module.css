@@ -1,48 +1,4 @@
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  width: 100%;
-  padding: 0 32px;
-}
 
-.navLeft {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo {
-  font-weight: 600;
-  font-size: 12px;
-  padding: 8px 16px;
-}
-
-.intro {
-  font-weight: 600;
-  font-size: 12px;
-  opacity: 0.6;
-}
-
-.enterCode {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 8px;
-  border: 1px solid black;
-  background-color: #1A1B1C;
-  color: white;
-  padding: 8px 12px;
-}
-
-.main {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 64px);
-  color: #1A1B1C;
-  overflow: hidden;
-}
 
 
 /* center content */
@@ -93,6 +49,18 @@
   transform: translateY(-50%);
 }
 
+.btn:hover .btn__shape {
+  transform: rotate(45deg) scale(1.1);
+}
+
+.btn:hover .back__btn {
+  transform: rotate(30deg) scale(1.1);
+}
+
+.btn:hover .next__btn {
+  transform: rotate(90deg) scale(1.1);
+}
+
 .btn__caption {
   font-weight: 400;
   font-size: 14px;
@@ -106,6 +74,7 @@
   font-size: 30px;
   transform: rotate(45deg);
   display: flex;
+  transition: all 0.3s ease;
 }
 
 .back__btn {
@@ -114,6 +83,7 @@
   top: 17px;
   transform: rotate(30deg);
   font-size: 12px;
+  transition: all 0.3s ease;
 }
 
 .next__btn {
@@ -122,6 +92,7 @@
   top: 19px;
   transform: rotate(90deg);
   font-size: 12px;
+  transition: all 0.3s ease;
 }
 
 
