@@ -1,0 +1,243 @@
+.page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.intro__name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 540px;
+    font-family: 'Roboto';
+}
+.intro__directions {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #a0a4ab;
+}
+
+.intro__input {
+    font-size: 48px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 46px;
+    width: 100%;
+    max-width: 80%;
+    appearance: none;
+    outline: none;
+}
+
+.dotted__square--lg {
+  height: 500px;
+  width: 500px;
+  border: 1px dashed #a0a4ab;
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation: rotate 50s linear infinite;
+}
+
+.dotted__square--md {
+  height: 480px;
+  width: 480px;
+  border: 1px dashed #a0a4ab;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+  animation: rotate 70s linear infinite;
+}
+
+.dotted__square--sm {
+  height: 430px;
+  width: 430px;
+  border: 1px dashed #a0a4ab;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(150deg);
+  animation: rotate 85s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.back__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 32px;
+  left: 40px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.back__btn:hover .btn__shape {
+  transform: scale(1.1) rotate(45deg);
+}
+
+.next__btn:hover .btn__shape {
+  transform: scale(1.1) rotate(45deg);
+}
+
+.back__btn a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.btn__shape {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #1A1B1C;
+  transform: rotate(45deg);
+  display: flex;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn__inner--shape {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  font-size: 10px;
+}
+
+.next__inner--shape {
+  position: absolute;
+  top: 50%;
+  right: 9%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+
+.back__btn--caption {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #1A1B1C;
+    margin-left: 12px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.next__btn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 32px;
+  right: 40px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.next__btn--caption {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 540px;
+}
+
+.success__title {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.success__message {
+  font-size: 20px;
+  color: rgb(77, 77, 77);
+  margin-top: 8px;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #a0a4ab;
+  font-size: 20px;
+}
+
+.loading__dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.loading__dots svg {
+  margin: 0 4px;
+  animation: blink 1.2s infinite ease-in-out;
+}
+
+.loading__dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading__dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loading__dots svg:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading__dots svg:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading__dots svg:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

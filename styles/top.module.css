@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  width: 100%;
+  padding: 0 32px;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 12px;
+  padding: 8px 16px;
+}
+
+.intro {
+  font-weight: 600;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.enterCode {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 8px;
+  border: 1px solid black;
+  background-color: #1A1B1C;
+  color: white;
+  padding: 8px 12px;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 64px);
+  color: #1A1B1C;
+  overflow: hidden;
+}
