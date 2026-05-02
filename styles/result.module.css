@@ -1,0 +1,262 @@
+/* Sections Display */
+.sections {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 64px);
+  position: relative;
+
+}
+
+.sub__section {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.section__icon {
+  position: relative;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.camera__line {
+  position: absolute;
+  width: 95px;
+  height: 1px;
+  background-color: #1A1B1C;
+  top: 42%;
+  right: 37%;
+  transform: rotate(-40deg);
+}
+
+.gallery__line {
+  position: absolute;
+  width: 95px;
+  height: 1px;
+  background-color: #1A1B1C;
+  bottom: 42%;
+  left: 37%;
+  transform: rotate(-40deg);
+}
+
+.scan__section--caption {
+  position: absolute;
+  top: 36%;
+  right: 22%;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: left;
+  max-width: 140px;
+  line-height: 1.5;
+}
+
+.gallery__section--caption {
+  position: absolute;
+  bottom: 34%;
+  left: 28%;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-width: 140px;
+  text-align: left;
+}
+
+/* Rotating Squares */
+
+.square__background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.dotted__square--lg {
+  height: 382px;
+  width: 382px;
+  border: 1px dashed #a0a4ab;
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation: rotate 50s linear infinite;
+}
+
+.dotted__square--md {
+  height: 345px;
+  width: 345px;
+  border: 1px dashed #a0a4ab;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+  animation: rotate 70s linear infinite;
+}
+
+.dotted__square--sm {
+  height: 305px;
+  width: 305px;
+  border: 1px dashed #a0a4ab;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(150deg);
+  animation: rotate 85s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/*  Buttons  */
+
+.btn {
+  cursor: pointer;
+}
+
+.btn:hover .section__icon {
+  transform: scale(1.1);
+}
+
+.back__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 32px;
+  left: 40px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.back__btn:hover .btn__shape {
+  transform: scale(1.1) rotate(45deg);
+}
+
+.back__btn a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.btn__shape {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #1A1B1C;
+  transform: rotate(45deg);
+  display: flex;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn__inner--shape {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  font-size: 10px;
+}
+
+.next__inner--shape {
+  position: absolute;
+  top: 50%;
+  right: 9%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+
+.back__btn--caption {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #1A1B1C;
+    margin-left: 12px;
+}
+
+/* Preview */
+
+.preview {
+  border: 1px solid #a0a4ab;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.preview__image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Access box */
+
+.access {
+  background-color: #1A1B1C;
+  padding: 16px 0 8px 0;
+  height: 15%;
+  width: 400px;
+  z-index: 50;
+  position: absolute;
+  top: 43%;
+  left: 32%;
+}
+
+.access__caption {
+  color: #fcfcfc;
+  font-weight: 600;
+  font-size: 16px;
+  padding-left: 16px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+.split {
+  border: 1px solid #fcfcfc;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+  padding-inline: 28px;
+  padding-top: 12px;
+  font-size: 16px;
+}
+
+
+.deny {
+  color: #fcfcfca1;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.allow {
+  color: #fcfcfc;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.allow:hover {
+  color:#fcfcfca1;
+}
