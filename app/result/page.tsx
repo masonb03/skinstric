@@ -45,23 +45,20 @@ const Page = () => {
                     </div>
                 )}
                 <div className={styles.sub__section}>
-  <div className={styles['dotted__square--lg']}></div>
-  <div className={styles['dotted__square--md']}></div>
-  <div className={styles['dotted__square--sm']}></div>
-
-  <UploadGallery
-    onImageSelect={(base64, preview) => {
-      setBase64Image(base64);
-      setPreview(preview);
-    }}
-  />
-
-  <div className={styles["gallery__section--caption"]}>
-    Allow A.I. access gallery
-  </div>
-
-  <div className={styles.gallery__line}></div>
-</div>
+                    <div className={styles['dotted__square--lg']}></div>
+                    <div className={styles['dotted__square--md']}></div>
+                    <div className={styles['dotted__square--sm']}></div>
+                        <UploadGallery
+                            onImageSelect={(base64, preview) => {
+                            setBase64Image(base64);
+                            setPreview(preview);
+                            }}
+                        />
+                        <div className={styles["gallery__section--caption"]}>
+                            Allow A.I. access gallery
+                        </div>
+                        <div className={styles.gallery__line}></div>
+                </div>
             </div>
             <div className={styles.back__btn}>
           <Link href="/testing">
