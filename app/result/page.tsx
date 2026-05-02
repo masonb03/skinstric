@@ -7,13 +7,15 @@ import camera from "../../public/camera-icon.webp"
 import TopSection from '@/components/TopSection'
 import Link from 'next/link'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import UploadGallery from '@/components/UploadGallery'
 
 const Page = () => {
 
     const [showAccessBox, setShowAccessBox] = useState(false);
-    const router = useRouter();
-   
+    const [preview, setPreview] = useState('');
+    const [base64Image, setBase64Image] = useState('');
+    
+
   return (
     <>
     <TopSection />
@@ -43,17 +45,23 @@ const Page = () => {
                     </div>
                 )}
                 <div className={styles.sub__section}>
-                        <div className={`${styles['dotted__square--lg']}`}></div>
-                        <div className={`${styles['dotted__square--md']}`}></div>
-                        <div className={`${styles['dotted__square--sm']}`}></div>
-                        <button className={styles.btn}>
-                            <Image src={gallery} alt="" className={styles.section__icon} />
-                        </button>
-                    <div className={`${styles["gallery__section--caption"]}`}>
-                        Allow A.I. access gallery
-                    </div>
-                    <div className={styles.gallery__line}></div>
-                </div>
+  <div className={styles['dotted__square--lg']}></div>
+  <div className={styles['dotted__square--md']}></div>
+  <div className={styles['dotted__square--sm']}></div>
+
+  <UploadGallery
+    onImageSelect={(base64, preview) => {
+      setBase64Image(base64);
+      setPreview(preview);
+    }}
+  />
+
+  <div className={styles["gallery__section--caption"]}>
+    Allow A.I. access gallery
+  </div>
+
+  <div className={styles.gallery__line}></div>
+</div>
             </div>
             <div className={styles.back__btn}>
           <Link href="/testing">
