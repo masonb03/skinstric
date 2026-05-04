@@ -80,7 +80,6 @@ const IntroStep = ({ direction, placeholder, nextRoute, field, isLastStep }: Int
                className={styles.intro__input}
                placeholder={placeholder}
                value={value}
-               disabled={status === 'loading'}
                onChange={(e) => {
                  setValue(e.target.value);
                  setError('');
