@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "../styles/globals.css";
+import TopSection from "@/components/TopSection";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.variable} `}>
       <body className={`${roboto.className}`}>
+        <TopSection />
         {children}
       </body>
     </html>

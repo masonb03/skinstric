@@ -1,0 +1,177 @@
+/* LOADING SECTION */
+
+/* Rotating Squares */
+.square__background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.dotted__square--lg {
+  height: 382px;
+  width: 382px;
+  border: 1px dashed #a0a4ab;
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation: rotate 50s linear infinite;
+}
+
+.dotted__square--md {
+  height: 345px;
+  width: 345px;
+  border: 1px dashed #a0a4ab;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+  animation: rotate 70s linear infinite;
+}
+
+.dotted__square--sm {
+  height: 305px;
+  width: 305px;
+  border: 1px dashed #a0a4ab;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(150deg);
+  animation: rotate 85s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Center content */
+
+.page {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+.center__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+
+/* CAMERA DISPLAY */
+
+.tips {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tips__caption {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.tips__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Camera */
+
+.capture__page {
+    width: 100vw;
+    height: 92vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.video {
+    object-fit: cover;
+    width: 100%;
+    height: calc(100vh - 64px);
+    position: absolute;
+}
+
+/* Buttons */
+
+.back__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 32px;
+  left: 40px;
+  gap: 12px;
+  cursor: pointer;
+  color: #fcfcfc;
+}
+
+.back__btn:hover .btn__shape {
+  transform: scale(1.1) rotate(45deg);
+}
+
+.back__btn a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.btn__shape {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #fcfcfc;
+  transform: rotate(45deg);
+  display: flex;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn__inner--shape {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  font-size: 10px;
+}
+
+.back__btn--caption {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    margin-left: 12px;
+}
+
+.take__picture {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+}
