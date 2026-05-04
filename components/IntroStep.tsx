@@ -4,7 +4,6 @@ import Link from 'next/link';
 import styles from '../styles/testing.module.css';
 import { IoTriangle } from "react-icons/io5";
 import { BsDot } from "react-icons/bs";
-import TopSection from './TopSection';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
@@ -67,7 +66,6 @@ const IntroStep = ({ direction, placeholder, nextRoute, field, isLastStep }: Int
 
   return (
     <div className={styles.page}>
-  <TopSection />
 
     <div className={`${styles['dotted__square--lg']}`}></div>
     <div className={`${styles['dotted__square--md']}`}></div>

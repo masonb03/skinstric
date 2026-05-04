@@ -14,6 +14,7 @@ type Props = {
 
 const UploadGallery = ({ onImageSelect }: Props) => {
   const fileInputRef = useRef<HTMLInputElement>(null)
+  
 
   const handleFileChange = (file: File) => {
     const previewUrl = URL.createObjectURL(file)

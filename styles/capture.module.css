@@ -1,0 +1,180 @@
+/* CAMERA DISPLAY */
+
+.tips {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  text-align: center;
+  color: #fcfcfc;
+  text-transform: uppercase;
+}
+
+.tips__caption {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.tips__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Camera */
+
+.capture__page {
+  width: 100vw;
+  height: 92vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #1A1B1C;
+}
+
+.video {
+    object-fit: cover;
+    width: 100%;
+    height: calc(100vh - 64px);
+    position: absolute;
+}
+
+/* Buttons */
+
+.back__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 32px;
+  left: 40px;
+  gap: 12px;
+  cursor: pointer;
+  color: #fcfcfc;
+}
+
+.back__btn:hover .btn__shape {
+  transform: scale(1.1) rotate(45deg);
+}
+
+.back__btn a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.btn__shape {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #fcfcfc;
+  transform: rotate(45deg);
+  display: flex;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn__inner--shape {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  font-size: 10px;
+}
+
+.back__btn--caption {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    margin-left: 12px;
+}
+
+.take__picture {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    color: #fcfcfc;
+    gap: 14px;
+}
+
+.take__picture--caption {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.camera__icon {
+  transition: all 0.3s ease;
+}
+
+.take__picture--btn {
+  cursor: pointer;
+}
+
+.take__picture--btn .camera__icon:hover {
+  transform: scale(1.05);
+}
+
+/* PREVIEW SCREEN */
+
+.great__shot {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #fcfcfc;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.preview__wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preview__photo {
+  width: 100%;
+  height: calc(100vh - 64px);
+  object-fit: cover;
+}
+
+.preview__buttons {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.retake__btn {
+  padding: 10px 24px;
+  border: 1px solid #fcfcfc;
+  background: #fcfcfc;
+  color: #1A1B1C;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.use__btn {
+  padding: 10px 24px;
+  background: #1A1B1C;
+  color: #fcfcfc;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

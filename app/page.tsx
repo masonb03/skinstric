@@ -6,7 +6,6 @@ import TopSection from '@/components/TopSection';
 export default function Home() {
   return (
     <div>
-      <TopSection />
 
       <main className={styles.main}>
 
