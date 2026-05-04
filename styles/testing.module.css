@@ -1,7 +1,7 @@
 .page {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 64px);
   overflow: hidden;
 }
 
@@ -32,6 +32,16 @@
     max-width: 80%;
     appearance: none;
     outline: none;
+}
+
+.square__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .dotted__square--lg {

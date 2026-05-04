@@ -7,7 +7,7 @@ import { IoTriangle } from 'react-icons/io5'
 import { useState } from 'react'
 
 const categories = [
-  { label: 'DEMOGRAPHICS', route: '/demographics', enabled: true },
+  { label: 'DEMOGRAPHICS', route: '/summary', enabled: true },
   { label: 'COSMETIC CONCERNS', route: null },
   { label: 'SKIN TYPE DETAILS', route: null },
   { label: 'WEATHER', route: null },

@@ -29,7 +29,7 @@ const Page = () => {
 
             const data = await res.json();
 
-            localStorage.setItem('demographricData', JSON.stringify(data.data));
+            localStorage.setItem('demographicData', JSON.stringify(data.data));
             localStorage.setItem('previewImage', preview);
 
             setTimeout(() => {
