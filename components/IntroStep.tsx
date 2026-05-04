@@ -66,10 +66,11 @@ const IntroStep = ({ direction, placeholder, nextRoute, field, isLastStep }: Int
 
   return (
     <div className={styles.page}>
-
-    <div className={`${styles['dotted__square--lg']}`}></div>
-    <div className={`${styles['dotted__square--md']}`}></div>
-    <div className={`${styles['dotted__square--sm']}`}></div>
+    <div className={styles.square__wrapper}>
+        <div className={`${styles['dotted__square--lg']}`}></div>
+        <div className={`${styles['dotted__square--md']}`}></div>
+        <div className={`${styles['dotted__square--sm']}`}></div>
+    </div>
   <div className={styles.intro__name}>
          {status === 'idle' && (
            <>

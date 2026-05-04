@@ -152,3 +152,107 @@
   bottom: 50%;
   transform: translateY(-50%) rotate(45deg);
 }
+
+@media (max-width: 1024px) {
+  .center__caption {
+    font-size: 60px;
+  }
+
+  .center__description {
+    font-size: 11px;
+    bottom: 80px;
+    left: 32px;
+    max-width: 240px;
+  }
+
+  .left__side {
+    left: 16px;
+  }
+
+  .right__side {
+    right: 16px;
+  }
+
+  .btn__caption {
+    display: none;
+  }
+
+  .left__side--shape {
+    height: 360px;
+    width: 360px;
+  }
+
+  .right__side--shape {
+    height: 360px;
+    width: 360px;
+  }
+
+  .btn__shape {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  .center__caption {
+    font-size: 42px;
+  }
+
+  .center__description {
+    font-size: 10px;
+    bottom: 48px;
+    left: 24px;
+    max-width: 200px;
+  }
+
+  .left__side {
+    left: 16px;
+  }
+
+  .right__side {
+    right: 16px;
+  }
+  
+  .btn__caption {
+    font-size: 11px;
+  }
+
+  .left__side--shape {
+    height: 360px;
+    width: 360px;
+  }
+
+  .right__side--shape {
+    height: 360px;
+    width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .center__caption {
+    font-size: 32px;
+  }
+
+  .center__description {
+    bottom: 48px;
+    left: 16px;
+    max-width: 160px;
+    font-size: 10px;
+  }
+
+  .btn__caption {
+    display: none;
+  }
+
+  .btn__shape {
+    height: 22px;
+    width: 22px;
+  }
+
+  .left__side--shape,
+  .right__side--shape {
+    display: none;
+  }
+}
