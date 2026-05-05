@@ -1,9 +1,14 @@
+"use client"
 import styles from '../styles/home.module.css';
 import { IoTriangle } from "react-icons/io5";
 import Link from 'next/link';
-import TopSection from '@/components/TopSection';
+import { useRouter } from 'next/navigation';
+
 
 export default function Home() {
+
+  const router = useRouter()
+
   return (
     <div>
 
@@ -30,6 +35,12 @@ export default function Home() {
                   <div className={styles.btn__shape}></div>
                 <div className={styles.next__btn}> <IoTriangle /> </div>
               </Link>
+        </div>
+        <div className={styles.enter__experience} onClick={() => router.push('/testing')}>
+          <span className={styles['enter__experience--caption']}>Enter Experience</span>
+          <div className={styles.btn__shape}>
+            <span className={styles.next__btn}><IoTriangle /></span>
+          </div>
         </div>
 
       </main>

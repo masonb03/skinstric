@@ -133,7 +133,7 @@ useEffect(() => {
             <span>A.I. CONFIDENCE</span>
           </div>
           {currentEntries.map(([key, value]) => {
-            const pct = (value * 100).toFixed(2)
+            const pct = (value * 100).toFixed(0)
             const isSelected = selected[activeCategory] === key
             return (
               <div

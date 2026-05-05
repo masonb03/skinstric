@@ -2,9 +2,7 @@
 import { IoTriangle } from 'react-icons/io5'
 import styles from "../../styles/result.module.css"
 import Image from 'next/image'
-import gallery from "../../public/gallery-icon.webp"
 import camera from "../../public/camera-icon.webp"
-import TopSection from '@/components/TopSection'
 import Link from 'next/link'
 import { useState } from 'react'
 import UploadGallery from '@/components/UploadGallery'

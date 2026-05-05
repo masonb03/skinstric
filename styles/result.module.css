@@ -337,3 +337,14 @@
     transform: translateY(-6px);
   }
 }
+
+@media (max-width: 1024px) {
+  .sections {
+    width: 95%;
+  }
+
+  .access {
+    width: 40%;
+    height: auto;
+  }
+}
