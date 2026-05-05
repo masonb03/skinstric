@@ -7,10 +7,9 @@
 .page {
   position: relative;
   width: 100%;
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
   color: #1A1B1C;
 }
-
 
 .header {
   padding: 24px 32px;
@@ -33,28 +32,27 @@
 .content {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 400px);
+  height: calc(100vh - 220px);
   margin-top: 32px;
-  gap: 2px
+  gap: 2px;
 }
 
-/* Left sidebar */
 .sidebar {
   width: 220px;
   flex-shrink: 0;
 }
 
 .sidebar__item {
-    margin: 12px;
-    padding: 12px;
-    border-bottom: 1px solid #e0e0e0;
-    background-color: #f5f5f5;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    }
+  margin: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
 
 .sidebar__item:hover {
-  background-color: #f5f5f5;
+  background-color: #ebebeb;
 }
 
 .sidebar__item--active:hover {
@@ -79,8 +77,6 @@
   text-transform: uppercase;
 }
 
-
-/* Chart section */
 .chart__section {
   flex: 1;
   display: flex;
@@ -116,15 +112,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 30%;
   transition: --percentage 0.6s ease;
 }
 
 .donut::after {
   content: '';
   position: absolute;
-  width: 330px;
-  height: 330px;
+  width: 310px;
+  height: 310px;
   border-radius: 50%;
   background: #f5f5f5;
 }
@@ -137,13 +132,12 @@
   color: #1A1B1C;
 }
 
-/* Right scores */
 .scores {
   width: 25%;
   border-top: 1px solid #000;
   flex-shrink: 0;
   overflow-y: auto;
-  background-color: #f5f5f5
+  background-color: #f5f5f5;
 }
 
 .scores__header {
@@ -165,7 +159,6 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
-
 
 .score__item--active {
   background-color: #1A1B1C;
@@ -192,7 +185,6 @@
   font-weight: 600;
 }
 
-/* Bottom hint */
 .hint {
   position: fixed;
   bottom: 32px;
@@ -283,7 +275,7 @@
   transform: scale(1.1) rotate(45deg);
 }
 
-/* Tablet - 1024px and below */
+/* Tablet - 1024px */
 @media (max-width: 1024px) {
   .header__title {
     font-size: 48px;
@@ -294,7 +286,7 @@
   }
 
   .content {
-    height: calc(100vh - 320px);
+    height: calc(100vh - 280px);
   }
 
   .sidebar {
@@ -302,90 +294,86 @@
   }
 
   .sidebar__value {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .sidebar__label {
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 8px;
   }
 
-   .sidebar__item {
+  .sidebar__item {
     margin: 8px;
-    padding: 12px 18px;
+    padding: 12px;
   }
 
   .chart__label {
-    font-size: 38px;
-  }
-
-  .donut {
-    width: 260px;
-    height: 260px;
-    left: 15%;
-    scale: 1.5
-  }
-
-  .donut::after {
-    width: 250px;
-    height: 250px;
-  }
-
-  .donut__text {
     font-size: 28px;
   }
 
-  .scores {
-    width: 25%;
-    margin-right: 8px;
+  .donut {
+    width: 240px;
+    height: 240px;
   }
 
-  .score__value {
-    font-size: 18px;
-    font-weight: 400;
+  .donut::after {
+    width: 225px;
+    height: 225px;
+  }
+
+  .donut__text {
+    font-size: 24px;
+  }
+
+  .scores {
+    width: 28%;
   }
 
   .score__label {
-    font-size: 16px;
+    font-size: 13px;
+  }
+
+  .score__value {
+    font-size: 13px;
   }
 
   .scores__header {
-    font-size: 18px;
-  }
-
-  .btn__shape {
-    height: 36px;
-    width: 36px;
-  }
-
-  .btn__shape__right {
-    height: 36px;
-    width: 36px;
+    font-size: 12px;
+    padding: 12px 16px;
   }
 }
 
-/* Mobile - 768px and below */
+/* Mobile - 768px */
 @media (max-width: 768px) {
-  .header__title {
-    font-size: 36px;
+  .page {
+    min-height: 100vh;
+    height: auto;
   }
 
   .content {
     flex-direction: column;
     height: auto;
-    overflow-y: auto;
+    gap: 0;
+    margin-top: 0;
   }
 
   .sidebar {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .sidebar__item {
-    flex: 1;
-    margin: 4px;
-    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: none;
+    background-color: #ffffff;
+  }
+
+  .sidebar__item:last-child {
+    border-bottom: 1px solid #e0e0e0;
   }
 
   .sidebar__label {
@@ -393,60 +381,86 @@
     margin-top: 4px;
   }
 
+  .sidebar__value {
+    font-size: 14px;
+  }
+
   .chart__section {
-    padding: 16px;
+    width: 100%;
+    min-height: 320px;
     margin-right: 0;
-    min-height: 300px;
-  }
-
-  .chart__label {
-    font-size: 24px;
-  }
-
-   .donut {
-    left: 0;
-    width: 240px;
-    height: 240px;
-  }
-
-  .donut::after {
-    width: 228px;
-    height: 228px;
-  }
-
-  .donut__text {
-    font-size: 24px;
-  }
-
-  .chart__wrapper {
+    border-top: none;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
+  .chart__label {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .chart__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .donut {
+    position: relative;
+    left: auto;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+  }
+
+  .donut::after {
+    width: 188px;
+    height: 188px;
+    background: #f5f5f5;
+  }
+
+  .donut__text {
+    font-size: 20px;
+  }
+
   .scores {
     width: 100%;
-    max-height: 300px;
+    max-height: none;
+    overflow-y: visible;
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+    padding-bottom: 80px;
+  }
+
+  .scores__header {
+    font-size: 12px;
   }
 
   .hint {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    padding: 16px;
     font-size: 11px;
-    bottom: 24px;
   }
 
   .back__btn {
-    bottom: 24px;
+    position: fixed;
+    bottom: 16px;
     left: 16px;
   }
 
   .next__btn {
-    bottom: 24px;
+    position: fixed;
+    bottom: 16px;
     right: 16px;
-  }
-
-  .btn__shape,
-  .btn__shape__right {
-    height: 32px;
-    width: 32px;
   }
 
   .back__btn--caption,
@@ -455,7 +469,7 @@
   }
 }
 
-/* Small mobile - 480px and below */
+/* Small mobile - 480px */
 @media (max-width: 480px) {
   .header {
     padding: 16px;
@@ -466,11 +480,6 @@
   }
 
   .hint {
-    display: none;
-  }
-
-  .back__btn--caption,
-  .next__btn--caption {
     display: none;
   }
 }

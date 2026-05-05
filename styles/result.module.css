@@ -348,3 +348,125 @@
     height: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .sections {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 64px);
+  }
+
+  .sub__section {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .dotted__square--lg {
+    height: 240px;
+    width: 240px;
+  }
+
+  .dotted__square--md {
+    height: 210px;
+    width: 210px;
+  }
+
+  .dotted__square--sm {
+    height: 180px;
+    width: 180px;
+  }
+
+  .section__icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .scan__section--caption {
+    top: 28%;
+    right: 25%;
+    font-size: 12px;
+    max-width: 100px;
+  }
+
+  .gallery__section--caption {
+    bottom: 28%;
+    left: 25%;
+    font-size: 12px;
+    max-width: 100px;
+  }
+
+  .camera__line {
+    display: none
+  }
+
+  .gallery__line {
+    display: none
+  }
+
+  .access {
+    width: 50%;
+    left: 25%;
+    top: 10%;
+  }
+
+  .back__btn {
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .back__btn--caption {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub__section {
+    height: 45vh;
+  }
+
+  .dotted__square--lg {
+    height: 180px;
+    width: 180px;
+  }
+
+  .dotted__square--md {
+    height: 160px;
+    width: 160px;
+  }
+
+  .dotted__square--sm {
+    height: 140px;
+    width: 140px;
+  }
+
+  .section__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .scan__section--caption,
+  .gallery__section--caption {
+    font-size: 10px;
+    max-width: 80px;
+  }
+
+  .camera__line,
+  .gallery__line {
+    width: 40px;
+  }
+
+  .access {
+    width: 90%;
+    left: 5%;
+  }
+
+  .back__btn--caption {
+    display: none;
+  }
+
+  .btn__shape {
+    height: 32px;
+    width: 32px;
+  }
+}

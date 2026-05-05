@@ -251,3 +251,20 @@
     transform: translateY(-6px);
   }
 }
+
+@media (max-width: 768) {
+  .dotted__square--lg {
+    height: 300px;
+    width: 300px
+  }
+
+  .dotted__square--md {
+    height: 280px;
+    width: 280px
+  }
+
+  .dotted__square--sm {
+    height: 240px;
+    width: 244px
+  }
+}
